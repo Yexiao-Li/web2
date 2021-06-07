@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .alldiv {
+            height: 60px;
+            width: 100%;
+        }
+
+        .zidiv {
+            height: 60px;
+            margin: auto;
+            text-align: center;
+            line-height: 60px;
+            color: white;
+        }
+
+        #first {
+            background-color: red;
+        }
+
+        #second {
+            background-color: blue;
+        }
+
+        #third {
+            background-color: black;
+        }
+
+        #forth {
+            background-color: orange;
+        }
+
+        @media screen and (min-width: 1200px) {
+            .alldiv {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #first,#second,#third,#forth{
+                width: 25%;
+            }
+        }
+
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+            .alldiv {
+                height: 120px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #first {
+                width: 100%;
+            }
+
+            #second,#third,#forth{
+                width: 33.33%;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+            .alldiv {
+                height: 120px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #first,#second,#third,#forth{
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .alldiv {
+                height: 240px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #first,#second,#third,#forth{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alldiv">
+        <div class="zidiv" id="first">1</div>
+        <div class="zidiv" id="second">2</div>
+        <div class="zidiv" id="third">3</div>
+        <div class="zidiv" id="forth">4</div>
+    </div>
+</body>
+
+</html>
